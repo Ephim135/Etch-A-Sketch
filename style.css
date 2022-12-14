@@ -1,0 +1,21 @@
+#container {
+    
+    display: grid;
+    padding: 0px;
+    border: 1px;
+    border-color: black;
+    grid-template-columns: repeat(16, auto);
+    grid-template-rows: repeat(16, auto);
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+
+#container >* {
+    padding: 0px;
+    border: 2px;
+    margin: 1px;
+    border-color: white;
+    background-color: pink;
+    margin: 0px;
+}
