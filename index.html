@@ -9,7 +9,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
+    <div class="containerButtons">
+        <div class="buttons">
+            <div id="colorLabelContainer">
+                <input type="color" id="color" name="Color" value="#ff0000">
+                <label id="colorLabel" for="color">Color</label>
+            </div>
+            <button id="colorMode">Color Mode</button>
+            <button id="rainbowMode">Rainbow Mode</button>
+            <button id="eraser">Eraser</button>
+            <button id="clear">Clear</button>
+            <button id="border">Border</button>
+            <div id="sizeSlideValue">16</div>
+            <input type="range" id="sizeSlide" min="1" max="100" step="1" value="16">
+
+    </div>
+        <div id="container">
+        </div>
     </div>
 </body>
 </html>
