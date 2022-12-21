@@ -8,6 +8,8 @@ let color = "#ff0000";
 const clearButton = document.getElementById("clear");
 const rainbowButton = document.getElementById("rainbowMode");
 const borderButton = document.getElementById("border");
+const eraser = document.getElementById("eraser");
+const colorModeButton = document.getElementById("colorMode");
 
 
 // color Picker
@@ -37,6 +39,7 @@ rainbowButton.addEventListener("click", function(){
     }
     else {
         rainbowButton.style.backgroundColor = "green";
+        eraser.style.backgroundColor = "";
         setColorRainbow();
     }});
 
@@ -70,6 +73,35 @@ borderButton.addEventListener("click", function(){
         }
 
 }});
+
+// Eraser Button
+eraser.addEventListener("click", function (){
+    if (eraser.style.backgroundColor == "green"){
+        eraser.style.backgroundColor = "";
+        setColor();
+    }
+    else {
+        eraser.style.backgroundColor = "green";
+        rainbowButton.style.backgroundColor = "";
+        setColorEraser();
+    }
+});
+
+function setColorEraser() { 
+    for (let i = 0; i < grid.length; i++){
+        grid[i].addEventListener("mouseover", function(e){
+            e.target.style.backgroundColor = "white";
+        })}};
+
+// Color Mode 
+colorModeButton.addEventListener("click", function() {
+    eraser.style.backgroundColor = "";
+    rainbowButton.style.backgroundColor = "";
+    setColor();
+})
+
+
+
 
 sizeSlide.addEventListener("change", function(){
     container.innerHTML = ""; //delete pervious Grid
